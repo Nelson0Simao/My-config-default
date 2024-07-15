@@ -1,0 +1,27 @@
+
+source $HOME/.myConfig/bashrc
+
+alias_config () {
+
+	alias charles="bash /$HOME/.local/App/bin/charles"
+	# . "$HOME/.asdf/completions/asdf.bash"
+	. "$HOME/.asdf/asdf.sh"
+	alias ll="ls -l"
+	alias lla="ls -l -a"
+	alias la="ls -a"
+
+}
+
+config_export () {
+
+	export PATH=$PATH:/usr/local/go/bin
+	export PATH=$HOME/.local/bin:$PATH
+	. "$HOME/.cargo/env"
+    export GOPATH=$HOME/go
+    export PATH=$PATH:$GOPATH/bin
+
+}
+
+config_export
+alias_config
+
